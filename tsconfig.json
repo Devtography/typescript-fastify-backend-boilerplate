@@ -17,12 +17,12 @@
     "paths": {
       "*": [
         "node_modules/*",
-        "src/types/*",
+        "src/types/*"
       ],
       "_/*": ["src/*"],
       "_modules/*": ["src/models/*"],
       "_utils/*": ["src/utils/*"]
-    },
+    }
   },
   "include": ["src/**/*"]
 }
