@@ -10,7 +10,10 @@ module.exports = config = {
     }
   },
   moduleFileExtensions: ['ts', 'js', 'json'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+  moduleNameMapper: pathsToModuleNameMapper(
+    compilerOptions.paths,
+    { prefix: '<rootDir>/' }
+  ),
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
