@@ -7,12 +7,26 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Debug via NPM",
+            "name": "Debug",
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
             "port": 9229,
             "runtimeExecutable": "npm",
             "runtimeArgs": ["run-script", "debug"]
-        }
+        },
+        {
+            "type": "node",
+            "name": "Jest tests",
+            "request": "launch",
+            "runtimeExecutable": "npm",
+            "args": [
+                "run-script",
+                "test"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "protocol": "inspector",
+            "internalConsoleOptions": "neverOpen",
+        },
     ]
 }
