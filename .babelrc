@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./dist"],
+      "alias": {
+        "_": "./dist",
+        "_models": "./dist/models",
+        "_utils": "./dist/utils"
+      }
+    }]
+  ]
+}

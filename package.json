@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A boilerplate for Node.js express apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
+    "build": "rimraf dist && tsc && babel dist --out-dir dist",
     "test": "jest --forceExit --coverage --verbose"
   },
   "repository": {
