@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "A boilerplate for Node.js express apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
-    "build": "rimraf dist && tsc --sourceMap false && babel dist --out-dir dist",
+    "build": "rimraf dist && tsc && babel dist --out-dir dist",
     "debug": "tsnd -r tsconfig-paths/register --inspect --respawn --transpile-only src/server.ts",
-    "test": "jest --forceExit --coverage --verbose",
+    "test": "jest --detectOpenHandles --coverage --verbose",
     "watch-test": "npm run test -- --watchAll"
   },
   "repository": {
