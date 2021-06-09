@@ -1,7 +1,7 @@
 {
   "name": "typescript-backend-starter",
   "version": "0.0.1",
-  "description": "A boilerplate for Node.js express apps with TypeScript and test/build pipeline. Tailored for backend services.",
+  "description": "A boilerplate for Node.js Fastify apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
     "build": "rimraf dist && tsc && babel dist --out-dir dist",
     "debug": "tsnd -r tsconfig-paths/register --inspect --respawn --transpile-only src/server.ts",
@@ -12,6 +12,12 @@
     "type": "git",
     "url": "https://github.com/Devtography/typescript-backend-starter"
   },
+  "keywords": [
+    "Node.js",
+    "Fastify",
+    "TypeScript",
+    "jest"
+  ],
   "author": "Wing Chau",
   "license": "MIT",
   "dependencies": {
