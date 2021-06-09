@@ -4,7 +4,8 @@
   "description": "A boilerplate for Node.js express apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
     "build": "rimraf dist && tsc && babel dist --out-dir dist",
-    "test": "jest --forceExit --coverage --verbose"
+    "test": "jest --forceExit --coverage --verbose",
+    "watch-test": "npm run test -- --watchAll"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "pino-pretty": "^5.0.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.3",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^4.3.2"
   }
 }
