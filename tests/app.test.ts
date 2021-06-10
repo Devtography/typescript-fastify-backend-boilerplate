@@ -1,7 +1,7 @@
-import app from '_/app';
+import createServer from '_/app';
 
 test('sample server', async () => {
-  const server = await app();
+  const server = await createServer();
 
   const res = await server.inject({
     method: 'GET',

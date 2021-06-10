@@ -1,7 +1,7 @@
 import { fastify, FastifyInstance } from 'fastify';
 import fastifyCors from 'fastify-cors';
 
-async function build(opts = {}): Promise<FastifyInstance> {
+async function createServer(opts = {}): Promise<FastifyInstance> {
   const app = fastify(opts);
 
   // Registers plugins from Fastify ecosystem.
@@ -14,4 +14,4 @@ async function build(opts = {}): Promise<FastifyInstance> {
   return app;
 }
 
-export default build;
+export default createServer;

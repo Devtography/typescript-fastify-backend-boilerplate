@@ -1,4 +1,4 @@
-import app from '_/app';
+import createServer from '_/app';
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
@@ -6,7 +6,7 @@ const PORT = PRODUCTION ? 80 : 3000;
 const LISTEN_ADDR = PRODUCTION ? '::' : '127.0.0.1';
 
 async function startServer() {
-  const server = await app({
+  const server = await createServer({
     logger: {
       level: PRODUCTION ? 'info' : 'debug',
       prettyPrint: !PRODUCTION,
