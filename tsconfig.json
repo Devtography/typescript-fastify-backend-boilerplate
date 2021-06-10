@@ -15,6 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "_/*": ["src/*"],
+      "_apis/*": ["src/apis"], 
       "_modules/*": ["src/models/*"],
       "_utils/*": ["src/utils/*"]
     }

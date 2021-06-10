@@ -27,7 +27,14 @@
     "import/default": "off",
     // Already covered by TypeScript compiler
     "import/no-unresolved": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {"order": "asc"}
+      }
+    ],
     "no-use-before-define": "off",
+    "@typescript-eslint/require-await": "off",
     "@typescript-eslint/no-use-before-define": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn", { "argsIgnorePattern": "^_" }
