@@ -1,7 +1,9 @@
-import { FastifyInstance } from 'fastify';
+import { FastifyInstance, RequestGenericInterface } from 'fastify';
 
-interface Params {
-  id: number
+interface ReqSchema extends RequestGenericInterface {
+  Params: {
+    id: number
+  }
 }
 
 // Request schema validation & response serialisation
@@ -23,7 +25,7 @@ const opts = {
 };
 
 export default async (fastify: FastifyInstance): Promise<void> => {
-  fastify.get<{ Params: Params }>('/', opts, async (req, reply) => {
+  fastify.get<ReqSchema>('/', opts, async (req, reply) => {
     const { id } = req.params;
 
     await reply.code(200).send({ user: id });
