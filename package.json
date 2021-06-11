@@ -4,7 +4,7 @@
   "description": "A boilerplate for Node.js Fastify apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
     "build": "rimraf dist && tsc && babel dist --out-dir dist",
-    "debug": "tsnd -r tsconfig-paths/register --inspect --respawn --transpile-only src/server.ts",
+    "debug": "cross-env NODE_ENV=development tsnd -r tsconfig-paths/register --inspect --respawn --transpile-only src/server.ts",
     "test": "jest --detectOpenHandles --coverage --verbose",
     "watch-test": "npm run test -- --watchAll"
   },
@@ -21,7 +21,9 @@
   "author": "Wing Chau",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^3.17.0"
+    "fastify": "^3.17.0",
+    "fastify-autoload": "^3.7.1",
+    "fastify-cors": "^6.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",

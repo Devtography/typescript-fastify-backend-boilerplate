@@ -1,12 +1,5 @@
-import app from '_/app';
+import createServer from '_/app';
 
-test('sample server', async () => {
-  const server = app();
-
-  const res = await server.inject({
-    method: 'GET',
-    url: '/',
-  });
-
-  expect(res.statusCode).toBe(200);
+test('create server', async () => {
+  await expect(createServer()).resolves.not.toThrow();
 });
