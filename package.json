@@ -1,5 +1,5 @@
 {
-  "name": "typescript-backend-starter",
+  "name": "typescript-fastify-backend-boilerplate",
   "version": "0.0.1",
   "description": "A boilerplate for Node.js Fastify apps with TypeScript and test/build pipeline. Tailored for backend services.",
   "scripts": {
