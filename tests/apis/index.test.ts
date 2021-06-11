@@ -7,11 +7,26 @@ beforeAll(async () => {
   server = await createServer();
 });
 
-test('root api', async () => {
-  const res = await server.inject().get('/');
+describe('APIs - /', () => {
+  test('GET /', async () => {
+    const res = await server.inject().get('/');
 
-  expect(res.statusCode).toBe(200);
-  expect(res.body).toMatch('hello world');
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatch('hello world');
+  });
+
+  test('POST /', async () => {
+    const res = await server.inject().post('/').body({ action: 'ping' });
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toMatch('pong');
+  });
+
+  test('Invalid POST /', async () => {
+    const res = await server.inject().post('/').body({ action: '' });
+
+    expect(res.statusCode).toBe(400);
+  });
 });
 
 afterAll(async () => {
