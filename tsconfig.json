@@ -11,6 +11,10 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
