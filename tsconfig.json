@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES6",
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "_/*": ["src/*"],
+      "_apis/*": ["src/apis"], 
+      "_modules/*": ["src/models/*"],
+      "_utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}
